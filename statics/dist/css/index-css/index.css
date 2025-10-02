@@ -592,7 +592,6 @@ body {
 }
 
 
-/* ...existing code... */
 .icon-html-extra    { left: 10vw; top: 80vh; width: 48px; height: 48px; }
 .icon-js-extra      { left: 80vw; top: 15vh; width: 40px; height: 40px; }
 .icon-briefcase-extra { left: 60vw; top: 70vh; width: 56px; height: 56px; }
@@ -601,6 +600,152 @@ body {
 .icon-bootstrap-extra { left: 30vw; top: 60vh; width: 52px; height: 52px; }
 .icon-python-extra  { left: 85vw; top: 80vh; width: 38px; height: 38px; }
 .icon-django-extra  { left: 5vw; top: 30vh; width: 50px; height: 50px; }
-/* Asegúrate que .bg-icon tenga position: absolute y el contenedor .bg-icons tenga position: relative o absolute */
 
+/* Ajustes para pantallas de 425px */
+@media (max-width: 425px) {
+    .card-img {
+        height: 150px;
+        max-height: 150px;
+        object-fit: contain;
+        background: #fff;
+    }
+    .card-box {
+        min-height: 220px;
+        margin-bottom: 0;
+    }
+}
 
+/* Ajustes para pantallas de 375px */
+@media (max-width: 375px) {
+    .card-img {
+        height: 140px;
+        max-height: 140px;
+        object-fit: contain;
+        background: #fff;
+    }
+    .card-box {
+        min-height: 180px;
+        margin-bottom: 0;
+    }
+}
+
+/* Ajustes para pantallas de 320px */
+@media (max-width: 320px) {
+    .card-img {
+        height: 110px;
+        max-height: 110px;
+        object-fit: contain;
+        background: #fff;
+    }
+    .card-box {
+        min-height: 140px;
+        margin-bottom: 0;
+    }
+}
+
+/* Elimina animación hover en pantallas <= 768px */
+@media (max-width: 768px) {
+    .double-card:hover,
+    .double-card:focus-within,
+    .card-box:hover,
+    .card-box:focus-within {
+        transform: none !important;
+        box-shadow: none !important;
+        z-index: initial !important;
+    }
+    .card-box:hover .card-img,
+    .card-box:focus-within .card-img {
+        box-shadow: none !important;
+        border-color: initial !important;
+        transform: none !important;
+    }
+    .card-box:hover .card-name,
+    .card-box:focus-within .card-name {
+        box-shadow: none !important;
+        transform: none !important;
+        border-color: initial !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .double-card-bg {
+        padding: 0;
+    }
+    .double-card {
+        width: 95%;
+        gap: 0.1rem;
+    }
+    .logo-ascendev {
+        height: 55px;
+        animation: none !important;
+        margin-top: 1rem;
+    }
+    .logo-ascendev-container {
+        margin-bottom: 1rem;
+    }
+    .card-img {
+        width: 96%;
+    }
+    .card-buttons{
+        width: 92%;
+    }
+}
+
+.card-buttons {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 4px; /* Ajusta el padding si es necesario */
+}
+
+.card-buttons button {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* ...otros estilos... */
+}
+
+/* En media queries pequeñas, asegúrate de que .card-buttons no tenga width mayor al contenedor */
+@media (max-width: 425px) {
+    .card-buttons {
+        width: 90%;
+        padding: 0 2px;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-buttons {
+        width: 90%;
+        padding: 0 1px;
+    }
+    .card-buttons button{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-buttons button{
+        font-size: 0.9rem;
+    }
+}
+
+/* Minimiza la fuente de las modales en pantallas pequeñas */
+@media (max-width: 425px) {
+    .modal,
+    .modal-content {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal,
+    .modal-content {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .modal,
+    .modal-content {
+        font-size: 0.8rem;
+    }
+}

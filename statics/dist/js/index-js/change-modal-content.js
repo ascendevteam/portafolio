@@ -4,17 +4,17 @@
           title: 'El Equipo',
           body: `
         <div style="text-align:center;">
-          <span style="font-size:2rem; color:#1976d2;">
+          <span style="color:#1976d2;">
             <i class="fas fa-users"></i>
           </span>
           <h5 style="margin-top:0.5rem; color:#1976d2;">Somos AscenDev</h5>
-          <p style="font-size:1.05rem;">
+          <p>
             <strong>Desarrollo de software = mejora constante.</strong><br>
             Somos un equipo joven y dinámico: cada proyecto es una oportunidad para crecer, aprender y alcanzar nuevos niveles de excelencia.
           </p>
         </div>
         <div style="margin:1rem 0;">
-          <span style="color:#fbbc05; font-size:1.3rem;"><i class="fas fa-handshake"></i></span>
+          <span style="color:#fbbc05;"><i class="fas fa-handshake"></i></span>
           <strong style="color:#285563;">Relaciones duraderas</strong>
           <p style="margin-bottom:0.5rem;">
             Más que soluciones digitales, buscamos construir relaciones sólidas y entregar productos que superen expectativas.
@@ -54,14 +54,14 @@
           body: `
         <div style="display: flex; flex-direction: column; gap: 1.2rem;">
           <div style="display: flex; align-items: center; gap: 1rem;">
-            <span style="font-size:2.2rem; color:#1976d2;">
+            <span style="color:#1976d2;">
               <i class="fas fa-utensils"></i>
             </span>
             <div>
               <a href="https://tusitio.com/gestion-pedidos" target="_blank" class="project-link" style="font-weight:600; color:#1976d2; text-decoration:none;">
                 Sistema de gestión de pedidos para restaurante
               </a>
-              <div style="font-size:0.98rem; color:#285563;">
+              <div style="color:#285563;">
                 Optimiza y controla pedidos en tiempo real para establecimientos de comida.
               </div>
             </div>
@@ -74,24 +74,14 @@
               <a href="https://oltec.pythonanywhere.com/index" target="_blank" class="project-link" style="font-weight:600; color:#7952B3; text-decoration:none;">
                 Sistema de gestión para empresas
               </a>
-              <div style="font-size:0.98rem; color:#285563;">
+              <div style="color:#285563;">
                 Administra recursos, empleados y operaciones de manera eficiente.
               </div>
             </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <span style="font-size:2.2rem; color:#fbbc05;">
-              <i class="fas fa-qrcode"></i>
-            </span>
-            <div>
-              <a href="https://tusitio.com/asistencia-qr" target="_blank" class="project-link" style="font-weight:600; color:#fbbc05; text-decoration:none;">
-                Sistema de asistencia con código QR
-              </a>
-              <div style="font-size:0.98rem; color:#285563;">
-                Controla la asistencia de tu equipo de forma rápida y segura usando QR.
-              </div>
-            </div>
-          </div>
+          
+
+
         </div>
         <div style="margin-top:1.5rem; text-align:center;">
           <span style="display:inline-block; background:#e3f0ff; color:#1976d2; font-weight:600; padding:0.5em 1.2em; border-radius:16px;">
@@ -138,8 +128,6 @@
       }
     });
   });
-
-  // ...existing code...
 
 // Carrusel de tecnologías para la modal de servicios
 const techs = [
@@ -289,3 +277,19 @@ document.addEventListener('mouseout', function (e) {
     item._tooltip = null;
   }
 });
+
+//bloque de asistencia qr aqui mientras tanto 
+//<div style="display: flex; align-items: center; gap: 1rem;">
+            //<span style="font-size:2.2rem; color:#fbbc05;">
+              //<i class="fas fa-qrcode"></i>
+            //</span>
+            //<div>
+              //<a href="https://tusitio.com/asistencia-qr" target="_blank" class="project-link" style="font-weight:600; color:#fbbc05; text-decoration:none;">
+                //Sistema de asistencia con código QR
+              //</a>
+              //<div style="font-size:0.98rem; color:#285563;">
+                //Controla la asistencia de tu equipo de forma rápida y segura usando QR.
+              //</div>
+            //</div>
+          //</div>
+
