@@ -62,11 +62,8 @@
             </span>
             <div>
               <a href="https://ascendevteam.pythonanywhere.com" target="_blank" class="project-link" style="font-weight:600; color:#1976d2; text-decoration:none;">
-                Sistema de gestión de pedidos para restaurante
+                Sistema de gestión de pedidos para restaurante (¡Haz click aquí!)
               </a>
-              <div style="font-size:0.92em; color:#6c757d; margin-top:2px; text-align:left;">
-                Haz click
-              </div>
               <div style="color:#285563;">
                 Optimiza y controla pedidos en tiempo real para establecimientos de comida.
               </div>
@@ -78,10 +75,10 @@
             </span>
             <div>
               <a href="https://oltec.pythonanywhere.com/index" target="_blank" class="project-link" style="font-weight:600; color:#7952B3; text-decoration:none;">
-                Sistema de gestión para empresas
+                Sistema de gestión para empresas (¡Haz click aquí!)
               </a>
               <div style="font-size:0.92em; color:#6c757d; margin-top:2px; text-align:left;">
-                Haz click
+                
               </div>
               <div style="color:#285563;">
                 Administra recursos, empleados y operaciones de manera eficiente.

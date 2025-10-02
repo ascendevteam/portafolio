@@ -177,26 +177,6 @@
   cursor: pointer;
 }
 
-.project-link::after {
-  content: "¡Haz click!";
-  position: absolute;
-  left: 50%;
-  bottom: 120%;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #1976d2;
-  padding: 0.35em 1em;
-  border-radius: 8px;
-  font-size: 0.98rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.18s;
-  white-space: nowrap;
-  z-index: 10;
-}
-
 .project-link:hover::after {
   opacity: 1;
 }
