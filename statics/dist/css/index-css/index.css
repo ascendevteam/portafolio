@@ -710,6 +710,9 @@ body {
         width: 90%;
         padding: 0 2px;
     }
+    .card-buttons button{
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 375px) {
@@ -718,7 +721,7 @@ body {
         padding: 0 1px;
     }
     .card-buttons button{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
