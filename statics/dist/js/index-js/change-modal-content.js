@@ -44,8 +44,11 @@
           </div>
           <button class="carousel-arrow right" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <div style="text-align:center; margin-top:1.2rem;">
+        <div style="text-align:center; margin-top:1rem;">
           <small>¡Descubre lo que podemos hacer con cada tecnología!</small>
+        </div>
+        <div id="tech-desc" style="margin-top:1.2rem; text-align:center; min-height:2.5em;">
+          <!-- Aquí irá la descripción -->
         </div>
       `
       },
@@ -216,19 +219,25 @@ function renderTechCarousel(centerIdx = 2) {
   if (!$carousel) return;
 
   $carousel.innerHTML = `
-    <div class="tech-item tech-left" data-tooltip="${techs[leftIdx].desc}">
+    <div class="tech-item tech-left">
       ${techs[leftIdx].svg}
       <div class="tech-label">${techs[leftIdx].name}</div>
     </div>
-    <div class="tech-item tech-center" data-tooltip="${techs[centerIdx].desc}">
+    <div class="tech-item tech-center">
       ${techs[centerIdx].svg}
       <div class="tech-label">${techs[centerIdx].name}</div>
     </div>
-    <div class="tech-item tech-right" data-tooltip="${techs[rightIdx].desc}">
+    <div class="tech-item tech-right">
       ${techs[rightIdx].svg}
       <div class="tech-label">${techs[rightIdx].name}</div>
     </div>
   `;
+
+  // Actualiza la descripción dinámica
+  const $desc = document.getElementById('tech-desc');
+  if ($desc) {
+    $desc.textContent = techs[centerIdx].desc;
+  }
 
   $carousel.classList.add('fade');
   setTimeout(() => $carousel.classList.remove('fade'), 350);
@@ -256,40 +265,17 @@ document.addEventListener('click', function (e) {
   }
 });
 
-// Tooltip en hover
-document.addEventListener('mouseover', function (e) {
-  const item = e.target.closest('.tech-item');
-  if (item && item.dataset.tooltip) {
-    const tooltip = document.createElement('div');
-    tooltip.className = 'tech-tooltip';
-    tooltip.innerText = item.dataset.tooltip;
-    document.body.appendChild(tooltip);
-    const rect = item.getBoundingClientRect();
-    tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
-    tooltip.style.top = rect.top - tooltip.offsetHeight - 8 + window.scrollY + 'px';
-    item._tooltip = tooltip;
-  }
-});
-document.addEventListener('mouseout', function (e) {
-  const item = e.target.closest('.tech-item');
-  if (item && item._tooltip) {
-    item._tooltip.remove();
-    item._tooltip = null;
-  }
-});
-
 //bloque de asistencia qr aqui mientras tanto 
 //<div style="display: flex; align-items: center; gap: 1rem;">
-            //<span style="font-size:2.2rem; color:#fbbc05;">
-              //<i class="fas fa-qrcode"></i>
-            //</span>
-            //<div>
-              //<a href="https://tusitio.com/asistencia-qr" target="_blank" class="project-link" style="font-weight:600; color:#fbbc05; text-decoration:none;">
-                //Sistema de asistencia con código QR
-              //</a>
-              //<div style="font-size:0.98rem; color:#285563;">
-                //Controla la asistencia de tu equipo de forma rápida y segura usando QR.
-              //</div>
-            //</div>
-          //</div>
-
+//<span style="font-size:2.2rem; color:#fbbc05;">
+//<i class="fas fa-qrcode"></i>
+//</span>
+//<div>
+//<a href="https://tusitio.com/asistencia-qr" target="_blank" class="project-link" style="font-weight:600; color:#fbbc05; text-decoration:none;">
+//Sistema de asistencia con código QR
+//</a>
+//<div style="font-size:0.98rem; color:#285563;">
+//Controla la asistencia de tu equipo de forma rápida y segura usando QR.
+//</div>
+//</div>
+//</div>
