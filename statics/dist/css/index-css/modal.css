@@ -1,0 +1,211 @@
+/* ...existing code... */
+
+/* Modal styles */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(44, 62, 80, 0.25);
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-modal-content {
+    background: linear-gradient(135deg, #316879 0%, #547e86 60%, #62aac0 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+    min-width: 300px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.custom-modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.custom-modal-body {
+    font-size: 1.08rem;
+    color: #f4f4f8;
+}
+
+.custom-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    z-index: 10;
+}
+
+.custom-modal-close:hover {
+    color: #fbbc05;
+}
+
+.modal-header {
+    background: #316879; color: #fff;
+}
+.modal-body {
+    background: #f4f4f8; color: #1b3942;
+}
+
+
+
+
+
+
+
+
+
+
+/* ...existing code... */
+
+.tech-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 1.2em 0 0.5em 0;
+}
+
+.carousel-arrow {
+  background: #e3f0ff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  background: #1976d2;
+  color: #fff;
+  transform: scale(1.12);
+}
+
+.tech-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  gap: 0.5em;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0.6;
+  transition: transform 0.18s, opacity 0.18s;
+  cursor: pointer;
+  position: relative;
+  min-width: 80px;
+}
+
+.tech-item.tech-center {
+  transform: scale(1.5);
+  opacity: 1;
+  z-index: 2;
+}
+
+.tech-item.tech-left,
+.tech-item.tech-right {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.tech-label {
+  font-size: 1.1rem;
+  color: #285563;
+  margin-top: 0.2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tech-tooltip {
+  position: absolute;
+  background: #fff;
+  color: #1b3942;
+  padding: 0.45em 1em;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 0.98rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  z-index: 9999;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -38px;
+  opacity: 1;
+  animation: fadeInTooltip 0.18s;
+}
+@keyframes fadeInTooltip {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px);}
+  to   { opacity: 1; transform: translateX(-50%) translateY(0);}
+}
+
+@media (max-width: 500px) {
+  .tech-carousel { min-width: 160px; }
+  .tech-item { min-width: 32px; }
+  .carousel-arrow { width: 28px; height: 28px; font-size: 1rem; }
+}
+
+.project-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-link::after {
+  content: "¡Haz click!";
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #1976d2;
+  padding: 0.35em 1em;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.project-link:hover::after {
+  opacity: 1;
+}
+
+.tech-carousel.fade {
+  animation: techFade 0.35s;
+}
+
+@keyframes techFade {
+  from { opacity: 0; transform: translateY(20px) scale(0.96);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
