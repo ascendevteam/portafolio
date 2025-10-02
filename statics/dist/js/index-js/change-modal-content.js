@@ -61,9 +61,12 @@
               <i class="fas fa-utensils"></i>
             </span>
             <div>
-              <a href="https://tusitio.com/gestion-pedidos" target="_blank" class="project-link" style="font-weight:600; color:#1976d2; text-decoration:none;">
+              <a href="https://ascendevteam.pythonanywhere.com" target="_blank" class="project-link" style="font-weight:600; color:#1976d2; text-decoration:none;">
                 Sistema de gestión de pedidos para restaurante
               </a>
+              <div style="font-size:0.92em; color:#6c757d; margin-top:2px; text-align:left;">
+                Haz click
+              </div>
               <div style="color:#285563;">
                 Optimiza y controla pedidos en tiempo real para establecimientos de comida.
               </div>
@@ -77,6 +80,9 @@
               <a href="https://oltec.pythonanywhere.com/index" target="_blank" class="project-link" style="font-weight:600; color:#7952B3; text-decoration:none;">
                 Sistema de gestión para empresas
               </a>
+              <div style="font-size:0.92em; color:#6c757d; margin-top:2px; text-align:left;">
+                Haz click
+              </div>
               <div style="color:#285563;">
                 Administra recursos, empleados y operaciones de manera eficiente.
               </div>
